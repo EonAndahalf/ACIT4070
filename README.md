@@ -59,5 +59,5 @@ CREATE TABLE IF NOT EXISTS UserDB
 
 
 
-
+Then simply run (persistent) the app.py
 
