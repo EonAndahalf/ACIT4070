@@ -39,7 +39,7 @@ CREATE TABLE IF NOT EXISTS TrainsDB
            CONSTRAINT train_PK PRIMARY KEY (train_id)
         );
 
-LOAD DATA LOCAL INFILE 'TrainsDB.csv' 
+LOAD DATA LOCAL INFILE '\path to the local file\TrainsDB.csv' 
 INTO TABLE TrainsDB
 FIELDS TERMINATED BY ',';
 
