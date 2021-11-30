@@ -6,7 +6,7 @@ import os
 # Initiate Flask
 app = Flask(__name__)                               
 
-# # Initiate and connect the SQL DB
+# Initiate and connect the SQL DB
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'pswrd'
 app.config['MYSQL_DATABASE_DB'] = 'TrainsDB'
@@ -27,11 +27,9 @@ def index():
 # Endpoint for search in SQL DB
 @app.route('/search', methods=['GET', 'POST'])
 def search():
-
     if request.method == "POST":
         if request.form['trains']: 
             trains = request.form['trains']
-
             cursor.execute("SELECT from_dest, to_dest, date_of_dep, time_of_dep, ticket_id, addon_data from TrainsDB WHERE from_dest LIKE %s OR to_dest LIKE %s OR date_of_dep LIKE %s OR time_of_dep LIKE %s OR ticket_id LIKE %s OR addon_data LIKE %s" , (trains, trains, trains, trains, trains, trains))
             conn.commit()
             data = cursor.fetchall()
