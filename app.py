@@ -2,23 +2,29 @@ from flask import Flask, render_template, Response, request, url_for, redirect
 from flaskext.mysql import MySQL
 import os
 
-app = Flask(__name__)
+
+# Initiate Flask
+app = Flask(__name__)                               
+
+# # Initiate and connect the SQL DB
 app.config['MYSQL_DATABASE_USER'] = 'root'
 app.config['MYSQL_DATABASE_PASSWORD'] = 'pswrd'
 app.config['MYSQL_DATABASE_DB'] = 'TrainsDB'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
-
 mysql = MySQL()
 mysql.init_app(app)
 conn = mysql.connect()
+
+# Initiate curser to search DB
 cursor = conn.cursor()
 
-@app.route('/') #Landing Index page
+#Landing Index page
+@app.route('/')
 def index():
     return render_template('index.html')
 
 
-# Endpoint for search from sql
+# Endpoint for search in SQL DB
 @app.route('/search', methods=['GET', 'POST'])
 def search():
 
@@ -97,7 +103,7 @@ def submit_user_ticket():
         return render_template('users_ticket.html', data=clean_user_data)
   
 
-# Endpoint for buy
+# Endpoint for confirming the order
 @app.route("/buy", methods=['GET', 'POST'])
 def buy():
 
@@ -128,7 +134,7 @@ def buy():
     return render_template('receipt.html')
 
 
-# Endpoint for change users choice
+# Endpoint for canceling or checking
 @app.route('/change', methods=['GET', 'POST'])
 def change():
 
