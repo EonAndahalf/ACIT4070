@@ -17,6 +17,6 @@ In order for the database to work properly, the following needs to be configured
 
 Set up MySQL DB with -user: root and -password: pswrd
 
-Run all the commands in the mySQL_setup.sql.
+Run all the commands in the mySQL_setup.sql
 
 Then simply run (persistent) the .\app.py
