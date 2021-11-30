@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Youre Ticket</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+</head>
+<body>
+
+
+<h1 align="center">Your Ticket</h1>
+
+
+<div style="background: ghostwhite; 
+            font-size: 20px; 
+            padding: 20px; 
+            border: 30px solid lightgray; 
+            margin: 70px;">
+
+    <h2 align="center"> From: {{  data[0]  }}</h2>
+    <h2 align="center"> To: {{  data[1]  }}</h2>
+
+    <h2 align="center"> Time: {{  data[3]  }}</h2>
+    <h2 align="center"> Date: {{  data[2]  }}</h2>
+
+    <h2 align="center"> ID: {{  data[4]  }}</h2>
+
+    <h2 align="center"> Addon: {{  data[5]  }}</h2>
+
+</div>
+
+
+    <form method="post" action="/sell" >
+
+
+        <center>
+
+            <button type="submit" name="sell" value="{{ data }}" style="height:65px;width:150px" > Cancel </button>
+       
+        </center>
+    </form>
+
+
+    <p align="center"><a href=/ ><button class=grey style="height:55px;width:100px">Home</button></a></p>
+
+</body>
+</html>

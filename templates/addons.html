@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Choose Add-ons</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+</head>
+<body>
+ 
+
+    <h1><center>Choose Add-ons</center></h1>
+
+    <form method="post" action="/addons">
+    
+    <center>
+
+    <button type="submit" name="addons" value= "{{data[0]}}" style="height:75px;width:150px">  {{data[0]}} </button>
+    <button type="submit" name="addons" value= "{{data[1]}}" style="height:75px;width:150px">  {{data[1]}} </button>
+    <button type="submit" name="addons" value= "{{data[2]}}" style="height:75px;width:150px">  {{data[2]}} </button>
+    <button type="submit" name="addons" value= "{{data[3]}}" style="height:75px;width:150px">  {{data[3]}} </button>
+
+
+    </center>
+    </form>
+
+ <p align="center"><a href=/ ><button class=grey style="height:45px;width:150px">Home</button></a></p>
+
+</body>
+</html>

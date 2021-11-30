@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Supplement</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/index.css">
+</head>
+</head>
+<body>
+
+
+    
+    <h2><center>Which ticket would you like to supplement with the {{user_addon}} addon</center> </h2>
+    <h3><center>Search Your Booking</center></h3>
+
+
+    <form class="example" method="post" action="/supplement" style="margin:auto;max-width:600px">
+        <input type="text" name="trains" value="all" placeholder="search for destination or time">
+        <button type="submit"> <i class="fa fa-search"></i> </button>
+
+    </form>
+
+
+    <h3><center>Your Booking</center></h3>
+
+
+    <form method="post" action="/submit_user_supp">
+    <center>
+
+        {% for item in data %}
+        <button type="submit" name="suplement" value= "{{item}}" > {{item[0]}} to {{item[1]}} Date: {{item[2]}} Time: {{item[3]}} ID: {{item[4]}}</button>
+        {% endfor %}
+
+
+
+    </center>
+    </form>
+
+
+ <p align="center"><a href=/ ><button class=grey style="height:45px;width:150px">Home</button></a></p>
+
+</body>
+</html>
