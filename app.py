@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__)
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'Sushi2021'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'pswrd'
 app.config['MYSQL_DATABASE_DB'] = 'TrainsDB'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 
