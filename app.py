@@ -8,7 +8,7 @@ app = Flask(__name__)
 
 # Initiate and connect the SQL DB
 app.config['MYSQL_DATABASE_USER'] = 'root'
-app.config['MYSQL_DATABASE_PASSWORD'] = 'pswrd'
+app.config['MYSQL_DATABASE_PASSWORD'] = 'paswrd'
 app.config['MYSQL_DATABASE_DB'] = 'TrainsDB'
 app.config['MYSQL_DATABASE_HOST'] = 'localhost'
 mysql = MySQL()
