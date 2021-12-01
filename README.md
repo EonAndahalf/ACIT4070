@@ -4,7 +4,7 @@ The Norwegian Rail Ticketing system
 
 This is a prototype demo of the Norwegian Rail Ticketing system
 ACIT4070 - Programming and APIs for Interaction 
-Student - S325936
+Candidate number 128
 
 
 Requirements in order to run this demo:
